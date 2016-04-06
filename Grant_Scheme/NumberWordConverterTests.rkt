@@ -3,9 +3,21 @@
 (require rackunit
          "NumberWordConverter.rkt")
 
-(check-equal? (number->words 123) 
-              "hi mum"
-              "numbers just come out as 'hi mum' for some reason")
+(check-equal? (number->words 1) 
+              "one"
+              "single number one")
+
+(check-equal? (number->words 2) 
+              "two"
+              "single number two")
+
+(check-equal? (number->words 20) 
+              "twenty"
+              "tens: twenty")
+
+(check-equal? (number->words 21) 
+              "twenty one"
+              "complex tens: twenty one")
 
 
 "**********************"
