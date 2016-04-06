@@ -31,6 +31,30 @@
               "one hundred"
               "hundreds: one hundred")
 
+(check-equal? (number->words 123) 
+              "one hundred twenty three"
+              "hundreds: 123")
+
+(check-equal? (number->words 1000) 
+              "one thousand"
+              "thousands: 1000")
+
+(check-equal? (number->words 1234) 
+              "one thousand two hundred thirty four"
+              "thousands: 1234")
+
+(check-equal? (number->words 20000) 
+              "twenty thousand"
+              "ten-thousands: 20000")
+
+(check-equal? (number->words 123456) 
+              "one hundred twenty three thousand four hundred fifty six"
+              "hundred-thousands: 123456")
+
+(check-equal? (number->words 1234567) 
+              "one million two hundred thirty four thousand five hundred sixty seven"
+              "millions: 1234567")
+
 "**********************"
 "*** Tests Complete ***"
 "**********************"
