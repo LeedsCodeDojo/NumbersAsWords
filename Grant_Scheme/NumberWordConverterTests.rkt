@@ -55,6 +55,10 @@
               "one million two hundred thirty four thousand five hundred sixty seven"
               "millions: 1234567")
 
+(check-equal? (number->words 9999999999) 
+              "nine billion nine hundred ninety nine million nine hundred ninety nine thousand nine hundred ninety nine"
+              "billions 9999999999")
+
 "**********************"
 "*** Tests Complete ***"
 "**********************"
